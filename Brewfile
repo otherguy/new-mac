@@ -244,9 +244,10 @@ mas "WhatsApp", id: 1147396723
 #####################################################################
 # Whalebrew                                                         #
 #####################################################################
-whalebrew "redis-redis"
 whalebrew "redis"
-whalebrew "shellcheck"
-whalebrew "terraform"
-whalebrew "travis"
-whalebrew "whalesay"
+whalebrew "whalebrew/awscli"
+whalebrew "whalebrew/shellcheck"
+whalebrew "whalebrew/terraform"
+whalebrew "whalebrew/travis"
+whalebrew "whalebrew/whalesay"
+whalebrew "otherguy/pokemonsay"

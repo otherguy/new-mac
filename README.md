@@ -30,7 +30,6 @@ The things I do when setting up a new Mac
 
 - [ ] Remove ~labels~ tags and clean up sidebar
 
-
 ## Install and configure
 
 - [ ] [Apple TV Aerial Views Screen Saver](https://github.com/JohnCoates/Aerial)

@@ -15,10 +15,10 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "Alex's Macbook"
-sudo scutil --set HostName "Alex's MacBook"
+sudo scutil --set ComputerName "Alex' MacBook"
+sudo scutil --set HostName "Alex' MacBook"
 sudo scutil --set LocalHostName "alex-macbook"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Alex's Macbook"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "Alex' MacBook"
 
 # This plays the startup chime at a substantially reduced volume level
 sudo nvram SystemAudioVolume=" "

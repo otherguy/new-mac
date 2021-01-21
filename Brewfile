@@ -176,7 +176,6 @@ cask "vlc"
 cask "zoom"
 
 # Work: kaleido.ai
-brew "python@3.8" # required for Google Cloud SDK
 cask "google-cloud-sdk"
 cask "miro"
 cask "notion"

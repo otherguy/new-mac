@@ -82,6 +82,7 @@ brew "svn" # for checking out fonts later
 
 # GnuPG
 brew "gnupg2"
+brew "paperkey"
 brew "pinentry-mac"
 
 # Docker

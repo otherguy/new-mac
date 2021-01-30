@@ -275,3 +275,30 @@ function plist_diff() {
   fi
 }
 
+# Select from all available gcloud projects
+# Usage: gcloud_select [<project>]
+#
+# Requirements:
+#  - gcloud (configured and logged in)
+#  - jq
+#  - dialog
+function gcloud_select() {
+    if [ $# == 0 ]; then
+        available_projects=()
+        available_projects_csv="$(gcloud projects list --page-size=unlimited --filter='lifecycleState:ACTIVE' --format=json | jq -r '.[] | "\(.projectId),\(.name)"')"
+        num_available_projects=$(echo "${available_projects_csv}" | wc -l | sed -E "s/([a-z\-\_\.]|[[:space:]]*)//g")
+        dialog_lines=$(dc -e "[10]sM ${num_available_projects}d 10<Mp")
+        while IFS=',' read -r id name dummy
+        do
+           available_projects+=("${id}")
+           available_projects+=("${name}")
+        done < <(echo "${available_projects_csv}")    
+        
+        selected_project=$(dialog --keep-tite --clear --title "Available Projects" --backtitle "Google Cloud" --menu "Use [UP/DOWN] key to move" 15 80 ${dialog_lines} "${available_projects[@]}" 2>&1 1>/dev/tty)   
+    else
+        selected_project="$1"
+    fi
+    
+    echo "gcloud: switching to project ${selected_project}"
+    gcloud config set project "${selected_project}"
+}

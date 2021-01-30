@@ -250,7 +250,7 @@ function ip() { /usr/local/bin/grc -es --colour=auto /usr/bin/whois -h whois.ari
 # Kill app running on port
 # Usage: killport <port>
 # Example: killport 3000
-function killport { port=$(lsof -n -i4TCP:$1 | grep LISTEN | awk '{print $2}') kill -9 $port }
+function killport { kill -9 $(lsof -n -i4TCP:$1 | grep LISTEN | awk '{print $2}') }
 
 # Kill app hogging a Volume
 # Usage: killvolume <volume>

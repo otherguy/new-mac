@@ -232,17 +232,6 @@ function dedit() {
   rm "${TMPFILE}"
 }
 
-# Alias minikube to a function to get some default start parameters
-function minikube() {
-	if [[ "$1" == "start" ]] ; then
-		eval command minikube start "${@:2}" --extra-config=controller-manager.horizontal-pod-autoscaler-upscale-delay=10s --extra-config=controller-manager.horizontal-pod-autoscaler-downscale-delay=10s --extra-config=controller-manager.horizontal-pod-autoscaler-sync-period=1s --extra-config=controller-manager.horizontal-pod-autoscaler-downscale-stabilization=1m --extra-config=controller-manager.horizontal-pod-autoscaler-use-rest-clients=false --extra-config kubelet.enable-custom-metrics=true --extra-config=kubeadm.ignore-preflight-errors=SystemVerification
-	elif [[ "$1" == "stop" ]] ; then
-		eval command minikube stop "${@:2}"
-	else
-		eval command minikube "$@"
-	fi
-}
-
 # Usage:
 # $ ip 172.217.16.142
 function ip() { /usr/local/bin/grc -es --colour=auto /usr/bin/whois -h whois.arin.net "n $@"; }

@@ -47,7 +47,7 @@ alias egrep='egrep --color=auto'
 alias week='date +%V'
 
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias upgrade='mas upgrade; brew update; brew upgrade; brew cu --all --yes --cleanup; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup; sudo chown $(id -un):$(id -ng) /Applications/*'
+alias upgrade='mas upgrade; brew update; brew upgrade; brew cu --all --yes --cleanup; brew cleanup; asdf plugin update --all; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup; sudo chown $(id -un):$(id -ng) /Applications/*'
 
 # IP addresses
 alias ip="curl ifconfig.co"

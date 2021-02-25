@@ -40,17 +40,12 @@ source /usr/local/etc/profile.d/z.sh
 
 
 #############################################################################
+# GitHub
+#############################################################################
+gh completion -s zsh > /usr/local/share/zsh/site-functions/_gh
+
+
+#############################################################################
 # iTerm Shell Integration
 #############################################################################
 test -e "${HOME}/.iterm2_shell_integration.`basename $SHELL`" && source "${HOME}/.iterm2_shell_integration.`basename $SHELL`"
-
-
-#############################################################################
-# Minikube
-#############################################################################
-
-if [ "$(minikube status --output json | jq -r '.Host')" == "Stopped" ]; then
-	echo "☸️  Minikube is not running."
-else
-	eval $(minikube docker-env)
-fi

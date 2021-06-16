@@ -91,6 +91,12 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 
 #############################################################################
+# Go
+#############################################################################
+export PATH=$PATH:$(go env GOPATH)/bin
+
+
+#############################################################################
 # GnuPG
 #############################################################################
 # Avoid issues with `gpg` as installed via Homebrew.
@@ -104,3 +110,10 @@ export GPG_TTY=$(tty)
 export CLOUDSDK_PYTHON="/usr/local/opt/python@3.9/libexec/bin/python"
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+
+
+#############################################################################
+# ASDF Version Manager
+# https://asdf-vm.com/
+#############################################################################
+source /usr/local/opt/asdf/asdf.sh

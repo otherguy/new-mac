@@ -3,21 +3,23 @@
 #####################################################################
 # Taps                                                              #
 #####################################################################
+tap "arttor/tap"
 tap "buo/cask-upgrade"
 tap "derailed/popeye"
 tap "dnlggr/tap"
 tap "domt4/autoupdate"
-tap "drud/ddev"
 tap "homebrew/bundle"
+tap "homebrew/cask"
 tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
-tap "homebrew/cask"
 tap "homebrew/core"
+tap "homebrew/services"
+tap "instrumenta/instrumenta"
+tap "kube-score/tap"
 tap "moncho/dry"
 tap "odlp/bluesnooze"
 tap "stern/stern"
-
 
 #####################################################################
 # Brews                                                             #
@@ -214,23 +216,29 @@ mas "AdGuard for Safari", id: 1440147259
 mas "BaseCamp", id: 411052274
 mas "Better Rename 9", id: 414209656
 mas "Deliveries", id: 290986013
+mas "Disk Speed Test", id: 425264550
 mas "Dynamo", id: 1445910651
 mas "Fantastical", id: 975937182
 mas "GAget", id: 968487158
+mas "Genki Arcade", id: 1555925018
 mas "GIF Brewery 3", id: 1081413713
-mas "Gifox", id: 1461845568
+mas "Hush", id: 1544743900
+mas "Jira", id: 1475897096
 mas "Keynote", id: 409183694
 mas "Link Unshortener", id: 1506953658
 mas "Magnet", id: 441258766
 mas "Messenger", id: 1480068668
 mas "Microsoft Remote Desktop", id: 1295203466
 mas "Next Meeting", id: 1017470484
-mas "NordVPN IKE", id: 1116599239
+mas "Noir", id: 1592917505
 mas "Numbers", id: 409203825
 mas "NZBin", id: 979608899
 mas "Pages", id: 409201541
 mas "PiPifier", id: 1160374471
+mas "Pixelmator Pro", id: 1289583905
 mas "Reeder", id: 1529448980
+mas "rubiTrack 6", id: 1557892760
+mas "Sequel Ace", id: 1518036000
 mas "Shazam", id: 897118787
 mas "Slack", id: 803453959
 mas "StopTheMadness", id: 1376402589
@@ -246,9 +254,8 @@ mas "WhatsApp", id: 1147396723
 # Whalebrew                                                         #
 #####################################################################
 whalebrew "redis"
-whalebrew "whalebrew/awscli"
+whalebrew "otherguy/pokemonsay"
+whalebrew "redis-obytes/redis-browser"
 whalebrew "whalebrew/shellcheck"
-whalebrew "whalebrew/terraform"
 whalebrew "whalebrew/travis"
 whalebrew "whalebrew/whalesay"
-whalebrew "otherguy/pokemonsay"

@@ -185,6 +185,7 @@ cask "miro"
 cask "notion"
 cask "removebg"
 
+
 # Quicklook
 cask "qlmarkdown"
 cask "quicklook-csv"

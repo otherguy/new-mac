@@ -15,7 +15,7 @@ The things I do when setting up a new Mac
 - [ ] Transfer `.gnupg` keyring and `.ssh` key files
 - [ ] [Disable Ruby documentation parsing](http://mts.io/2015/04/19/fix-slow-gem-install/)
 - [ ] Add `auth sufficient pam_tid.so` to `/etc/pam.d/sudo` for biometric `sudo` authentication
-- [ ] Install [programming languages through `asdf`](asdf.sh).
+- [ ] Install [programming languages with `bash ./asdf.sh`](asdf.sh).
 - [ ] ﹗ Reboot
 
 ## Alfred

@@ -21,8 +21,6 @@ brew "vips"
 brew "yamllint"
 brew "zlib"
 
-
-
 # Development
 brew "act"
 brew "asdf"
@@ -34,6 +32,7 @@ brew "curl"
 brew "dialog"
 brew "fetch"
 brew "findutils" # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
+brew "fzf"
 brew "gnu-sed" # Install GNU `sed` as gsed
 brew "gnu-tar" # Install GNU `tar` as gtar
 brew "grc"
@@ -45,6 +44,7 @@ brew "mosh"
 brew "mtr"
 brew "neofetch"
 brew "nmap"
+brew "peco"
 brew "python-yq"
 brew "qrencode"
 brew "starship"

@@ -4,9 +4,9 @@ The things I do when setting up a new Mac
 
 ## Initial setup
 
+- [ ] Set up Touch ID
 - [ ] Install and configure [Dropbox](https://www.dropbox.com/install) and let it sync
 - [ ] Install [homebrew](https://brew.sh)
-- [ ] Install [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh#basic-installation)
 - [ ] Install [Brewfile](Brewfile) with `brew bundle install --no-lock`
 - [ ] Copy all [`dotfiles`](dotfiles) to home directory and `hosts` to `/etc/hosts`
 - [ ] Use [mackup](https://github.com/lra/mackup) to restore configs `mackup restore --verbose`

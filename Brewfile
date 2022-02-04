@@ -1,5 +1,29 @@
 # brew bundle dump --describe --taps --brews --casks --mas --whalebrew
 
+
+#####################################################################
+# Taps                                                             #
+#####################################################################
+
+tap "arttor/tap"
+tap "buo/cask-upgrade"
+tap "cloudflare/cloudflare"
+tap "derailed/popeye"
+tap "dnlggr/tap"
+tap "domt4/autoupdate"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-drivers"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "instrumenta/instrumenta"
+tap "kube-score/tap"
+tap "moncho/dry"
+tap "odlp/bluesnooze"
+tap "stern/stern"
+
 #####################################################################
 # Brews                                                             #
 #####################################################################

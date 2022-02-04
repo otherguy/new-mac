@@ -66,7 +66,7 @@ defaults write com.apple.helpviewer DevMode -bool true
 # Reveal IP address, hostname, OS version, etc. when clicking the clock
 # in the login window
 sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
-sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText 'This \uf8ff belongs to Alexander Graf (alex@basecamp.tirol)'
+sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "'This  belongs to Alexander Graf (alex@basecamp.tirol)'"
 
 # Restart automatically if the computer freezes
 sudo systemsetup -setrestartfreeze on
@@ -158,8 +158,8 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool true
 # 10 => 150ms
 # 15 => 225ms
 # https://apple.stackexchange.com/questions/10467/how-to-increase-keyboard-key-repeat-rate-on-os-x
-defaults write NSGlobalDomain KeyRepeat -int 2
-defaults write NSGlobalDomain InitialKeyRepeat -int 12
+defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
 # Set language and text formats
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with

@@ -184,3 +184,7 @@ cask "miro"
 cask "notion"
 cask "removebg"
 cask "zoom"
+
+
+whalebrew "otherguy/pokemonsay"
+whalebrew "otherguy/yamlfix"

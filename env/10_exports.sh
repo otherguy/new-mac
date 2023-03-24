@@ -66,34 +66,10 @@ export NODE_REPL_HISTORY_SIZE='32768'
 # Use sloppy mode by default, matching web browsers.
 export NODE_REPL_MODE='sloppy'
 
-
 #############################################################################
-# NodeJs
+# NPM
 #############################################################################
-
-# Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
-export PYTHONIOENCODING='UTF-8'
-
-
-#############################################################################
-# Fastlane
-#############################################################################
-
-export FASTLANE_SKIP_UPDATE_CHECK="1"
-export FASTLANE_OPT_OUT_USAGE="1"
-export FASTLANE_OPT_OUT_CRASH_REPORTING="1"
-
-
-#############################################################################
-# Rust/Cargo
-#############################################################################
-export PATH="$HOME/.cargo/bin:$PATH"
-
-
-#############################################################################
-# Go
-#############################################################################
-export PATH=$PATH:$(go env GOPATH)/bin
+export NPM_TOKEN="24fgX5-kaTnAbdHxrThr3J7ddHSLss2Eg4"
 
 
 #############################################################################
@@ -110,7 +86,7 @@ export GPG_TTY=$(tty)
 export CLOUDSDK_PYTHON="/usr/local/opt/python@3.9/libexec/bin/python"
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
-
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 #############################################################################
 # ASDF Version Manager

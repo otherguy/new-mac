@@ -92,11 +92,15 @@ alias wget='wget --content-disposition'
 # tail
 alias tailf='tail -f'
 
-# Colorls
-source $(dirname $(gem which colorls))/tab_complete.sh
+# ls
 alias ls="command ls ${LS_OPTIONS}" # Always use color output for `ls`
-alias l='colorls --group-directories-first --git-status --long' # list view
-alias ll='colorls --group-directories-first --git-status --long --almost-all' # detailed list view
+alias l='lsd --group-dirs first --long' # list view
+alias ll='lsd --group-dirs first --long --almost-all' # detailed list view
 
 # kn <my-context> to set kubernetes context
 alias kn="kubectl config set-context --current --namespace"
+function kc() {
+  echo "Connecting to running pod for workload '$1'"
+  kubectl exec -it $(kubectl get pod --selector="app=$1" --output jsonpath='{.items[0].metadata.name}') -- bash
+}
+compdef kubectl k

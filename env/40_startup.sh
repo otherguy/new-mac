@@ -5,7 +5,7 @@
 
 source <(kubectl completion zsh)
 alias k=kubectl
-complete -F __start_kubectl k
+complete -F kubectl k
 
 
 #############################################################################
@@ -42,7 +42,7 @@ source /usr/local/etc/profile.d/z.sh
 #############################################################################
 # GitHub
 #############################################################################
-gh completion -s zsh > /usr/local/share/zsh/site-functions/_gh
+eval "$(gh completion -s zsh)"
 
 
 #############################################################################

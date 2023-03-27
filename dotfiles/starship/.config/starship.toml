@@ -1,1 +1,249 @@
-/Users/alexander/Dropbox/dotfiles/.config/starship.toml
+# Don't print a new line at the start of the prompt
+add_newline = true
+
+format = """
+$username\
+$hostname\
+$shlvl\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$docker_context\
+$package\
+$golang\
+$helm\
+$java\
+$nodejs\
+$perl\
+$php\
+$python\
+$crystal\
+$ruby\
+$rust\
+$swift\
+$terraform\
+$kubernetes\
+$aws\
+$gcloud\
+$cmd_duration\
+$line_break\
+$custom\
+$jobs\
+$directory\
+$character"""
+
+# Only for canva/canva
+# command_timeout = 10000
+command_timeout = 1000
+
+
+[aws]
+format = 'on [$symbol$profile(\($region\))]($style) '
+style = "bold blue"
+symbol = "🅰 "
+[aws.region_aliases]
+#ap-southeast-2 = "au"
+#us-east-1 = "va"
+
+[battery]
+full_symbol = ""
+charging_symbol = ""
+discharging_symbol = ""
+
+# [[battery.display]]
+# threshold = 20
+# style = "bold red"
+#
+# [[battery.display]]
+# threshold = 50
+# style = "bold yellow"
+#
+# [[battery.display]]
+# threshold = 90
+# style = "bold green"
+
+[character]
+format = "$symbol "
+error_symbol = "[](bold bright-blue)"
+success_symbol = "[](bold bright-blue)"
+
+[cmd_duration]
+min_time = 1000
+format = "took [$duration]($style)"
+show_notifications = true
+min_time_to_notify = 60_000
+
+[crystal]
+format = "via [🔮 $version](bold blue) "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[directory]
+truncation_length = 6
+truncate_to_repo = false
+format = "[ $path ]($style)[$read_only]($read_only_style)"
+style = "bg:bright-blue fg:white"
+read_only = " "
+read_only_style = "bg:bright-blue fg:bright-red"
+truncation_symbol	= ""
+disabled = false
+
+# [docker]
+# symbol = " "
+# disabled = false
+
+[docker_context]
+format = "via [$symbol$context]($style) "
+symbol = " "
+style	= "blue bold"
+only_with_files	= true
+disabled = false
+
+# [env_var]
+# variable = "SHELL"
+# default = "Zsh"
+# prefix = "<"
+# suffix = ">"
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[gcloud]
+format ='on [$symbol $account \($project \[$region\]\)]($style) '
+symbol = ""
+style = "bold blue"
+disabled = false
+
+
+[gcloud.region_aliases]
+europe-west1 = "BE"
+europe-west2 = "GB"
+europe-west3 = "DE"
+europe-west4 = "NL"
+europe-west6 = "CH"
+
+[git_branch]
+symbol = " "
+truncation_length = 12
+truncation_symbol = "..."
+style = "bold purple"
+disabled = false
+
+[git_state]
+cherry_pick = "CHERRY PICKING"
+rebase = "REBASING"
+merge = "MERGING"
+revert = "REVERTING"
+bisect = "BISECTING"
+am = "AM"
+am_or_rebase = "AM/REBASE"
+#progress_divider = " of "
+style = "bold yellow"
+disabled = false
+
+[git_status]
+staged.value = "++"
+staged.style = "green"
+
+[golang]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[hostname]
+ssh_only = true
+format = "🤖 [$hostname]($style) "
+trim_at = "."
+disabled = false
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[kubernetes]
+symbol = "☸ "
+format ='on [$symbol$context( \($namespace\))]($style) '
+style = "yellow"
+disabled = false
+
+[kubernetes.context_aliases]
+"dev.local.cluster.k8s" = "dev"
+
+[line_break]
+disabled = false
+
+#[memory_usage]
+#disabled = false
+#show_percentage = true
+#show_swap = false
+#threshold = -1
+#symbol = " "
+#separator = "/"
+#style = "bold dimmed white"
+
+[nim]
+symbol = " "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = "⬢ "
+style = "bold green"
+disabled = false
+
+# [package]
+# symbol = " "
+# style = "bold red"
+# disabled = false
+
+[package]
+
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[python]
+symbol = " "
+format = 'via [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+pyenv_version_name = false
+python_binary = ["python", "python3", "python2"]
+style = "bold yellow"
+detect_files = [".python-version", "Pipfile", "__init__.py", "pyproject.toml", "requirements.txt", "setup.py", "tox.ini", "requirements-deploy.txt", "requirements-dev.txt"]
+disabled = false
+
+# [time]
+# format = "🕙%T"
+# style_root = "bold red"
+# style_user = "bold yellow"
+# show_always = true
+# disabled = false
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[swift]
+symbol = "ﯣ "
+
+[username]
+style_root = "bold red"
+style_user = "bold yellow"
+show_always = false
+disabled = false

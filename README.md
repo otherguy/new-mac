@@ -8,24 +8,36 @@ The things I do when setting up a new Mac
 - [ ] Install XCode command line tools with `xcode-select --install`
 - [ ] Install [homebrew](https://brew.sh)
 - [ ] Install [Brewfile](Brewfile) with `brew bundle install --no-lock`
+- [ ] Symlink (hard link) `hosts` to `/etc/hosts` with `sudo ln -f dotfiles/hosts /etc/hosts`
+- [ ] Restore all [`dotfiles`](dotfiles):
+
+      gfind dotfiles -mindepth 1 -maxdepth 1 -type d | xargs -L1 -I{} basename "{}" | xargs stow --dotfiles --target ~/ --dir dotfiles --adopt
+
+- [ ] Reset the repo
+
+        git reset .
 - [ ] _Optional, on work computer:_ `brew bundle install --no-lock --verbose --file=Brewfile-work`
-- [ ] Configure 1Password and let it synchv
-
-
-
-
-- [ ] Copy all [`dotfiles`](dotfiles) to home directory and `hosts` to `/etc/hosts`
-- [ ] Use [mackup](https://github.com/lra/mackup) to restore configs `mackup restore --verbose`
-
 - [ ] Run [`.macos`](.macos) file `source .macos`
 - [ ] Transfer `.gnupg` keyring and `.ssh` key files
 - [ ] [Disable Ruby documentation parsing](http://mts.io/2015/04/19/fix-slow-gem-install/)
 - [ ] Add `auth sufficient pam_tid.so` to `/etc/pam.d/sudo` for biometric `sudo` authentication
-- [ ] Install [programming languages with `bash ./asdf.sh`](asdf.sh).
+- [ ] Install [programming languages with `sh ./asdf.sh`](asdf.sh).
 - [ ] ﹗ Reboot
+- [ ] Configure 1Password and let it synch
 
 - [ ] Install and configure [Dropbox](https://www.dropbox.com/install) and let it sync
 
+
+Learn the YubiKey serial number and create the stubs to point to the GPG keyID and Yubikey Serial number
+
+```bash
+gpg --card-edit
+# then in the gpg prompt:
+# > fetch
+# > verify
+# > quit
+gpg-connect-agent "scd serialno" "learn --force" /bye
+```
 ## Alfred
 
 - [ ] Configure [Alfred](https://www.alfredapp.com/) and enable it for `⌘`-double tap

@@ -1,0 +1,19 @@
+# Work: Canva
+brew "argocd"
+brew "awscli"
+brew "circleci"
+cask "google-cloud-sdk"
+
+tap "canva/packages"
+brew "canva/packages/infra-tools"
+brew "bazel"
+
+tap "cloudflare/cloudflare"
+brew "cloudflare/cloudflare/cloudflared"
+
+tap "argoproj/tap"
+brew "argoproj/tap/kubectl-argo-rollouts"
+
+tap "remove-bg/tap"
+brew "remove-bg/tap/removebg"
+

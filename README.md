@@ -5,18 +5,26 @@ The things I do when setting up a new Mac
 ## Initial setup
 
 - [ ] Set up Touch ID
-- [ ] Install and configure [Dropbox](https://www.dropbox.com/install) and let it sync
+- [ ] Install XCode command line tools with `xcode-select --install`
 - [ ] Install [homebrew](https://brew.sh)
 - [ ] Install [Brewfile](Brewfile) with `brew bundle install --no-lock`
+- [ ] _Optional, on work computer:_ `brew bundle install --no-lock --verbose --file=Brewfile-work`
+- [ ] Configure 1Password and let it synchv
+
+
+
+
 - [ ] Copy all [`dotfiles`](dotfiles) to home directory and `hosts` to `/etc/hosts`
 - [ ] Use [mackup](https://github.com/lra/mackup) to restore configs `mackup restore --verbose`
-- [ ] Configure 1Password synced Vault
+
 - [ ] Run [`.macos`](.macos) file `source .macos`
 - [ ] Transfer `.gnupg` keyring and `.ssh` key files
 - [ ] [Disable Ruby documentation parsing](http://mts.io/2015/04/19/fix-slow-gem-install/)
 - [ ] Add `auth sufficient pam_tid.so` to `/etc/pam.d/sudo` for biometric `sudo` authentication
 - [ ] Install [programming languages with `bash ./asdf.sh`](asdf.sh).
 - [ ] ﹗ Reboot
+
+- [ ] Install and configure [Dropbox](https://www.dropbox.com/install) and let it sync
 
 ## Alfred
 

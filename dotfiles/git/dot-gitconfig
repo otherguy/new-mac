@@ -212,3 +212,6 @@
 
 [url "git://gist.github.com/"]
   insteadOf = "gist:"
+
+[url "git@github.com:"]
+  insteadOf = "https://github.com/"

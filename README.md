@@ -16,6 +16,7 @@ The things I do when setting up a new Mac
 - [ ] Reset the repo
 
         git reset .
+
 - [ ] _Optional, on work computer:_ `brew bundle install --no-lock --verbose --file=Brewfile-work`
 - [ ] Run [`.macos`](.macos) file `source .macos`
 - [ ] Transfer `.gnupg` keyring and `.ssh` key files
@@ -37,6 +38,7 @@ gpg --card-edit
 # > verify
 # > quit
 gpg-connect-agent "scd serialno" "learn --force" /bye
+gpg-connect-agent updatestartuptty /bye
 ```
 ## Alfred
 

@@ -89,3 +89,11 @@ gpg-connect-agent updatestartuptty /bye
 - [ ] Disable Fantastical Advanced setting `Go to today after adding items`
 - [ ] Block incoming port `80` using Little Snitch
 - [ ] Configure iMessage and Facetime to allow receiving text messages
+
+# iPad 
+
+This also works on iPad with [iSH](https://ish.app):
+
+apk --update add stow gnupg gnupg-scdaemon
+
+find dotfiles -mindepth 1 -maxdepth 1 -type d | xargs -I{} basename "{}" | xargs stow --dotfiles --target ~/ --dir dotfiles

@@ -122,7 +122,6 @@
   # Speed up commands involving untracked files such as `git status`.
   # https://git-scm.com/docs/git-update-index#_untracked_cache
   untrackedCache = true
-  editor = code --wait
 
 [color]
   # Use colors in Git commands that are capable of colored output when
@@ -150,8 +149,8 @@
   # https://gist.github.com/scisco/e6aad7393f19147266f9385f320ae27a
 	gpgsign = true
 
-[gpg]
-	program = /opt/homebrew/bin/gpg
+#[gpg]
+#	program = /opt/homebrew/bin/gpg
 
 [diff]
   # Detect copies as well as renames

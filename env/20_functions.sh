@@ -281,13 +281,13 @@ function gcloud_select() {
         do
            available_projects+=("${id}")
            available_projects+=("${name}")
-        done < <(echo "${available_projects_csv}")    
-        
-        selected_project=$(dialog --keep-tite --clear --title "Available Projects" --backtitle "Google Cloud" --menu "Use [UP/DOWN] key to move" 15 80 ${dialog_lines} "${available_projects[@]}" 2>&1 1>/dev/tty)   
+        done < <(echo "${available_projects_csv}")
+
+        selected_project=$(dialog --keep-tite --clear --title "Available Projects" --backtitle "Google Cloud" --menu "Use [UP/DOWN] key to move" 15 80 ${dialog_lines} "${available_projects[@]}" 2>&1 1>/dev/tty)
     else
         selected_project="$1"
     fi
-    
+
     echo "gcloud: switching to project ${selected_project}"
     gcloud config set project "${selected_project}"
 }

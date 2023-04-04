@@ -23,7 +23,8 @@ alias showDesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 
 # Lock the screen (when going AFK)
 #alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
-alias lock="osascript -e 'tell application \"System Events\" to keystroke \"q\" using {command down,control down}'"
+alias lock='osascript -e "tell application \"System Events\" to keystroke \"q\" using {command down,control down}"'
+alias sleep="pmset displaysleepnow"
 alias afk=lock
 
 # Gatekeeper (for installing 3rd party apps)
@@ -47,7 +48,7 @@ alias egrep='egrep --color=auto'
 alias week='date +%V'
 
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias upgrade='mas upgrade; brew update; brew upgrade; brew cu --all --yes --cleanup; brew cleanup; asdf plugin update --all; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup; sudo chown $(id -un):$(id -ng) /Applications/*; find /Applications -name "*.app" -depth 1 -exec sudo xattr -rd com.apple.quarantine "{}" \; 2> /dev/null'
+alias upgrade='mas upgrade; brew update; brew upgrade; brew cu --all --yes --cleanup; brew cleanup; asdf plugin update --all; sudo chown $(id -un):$(id -ng) /Applications/*; find /Applications -name "*.app" -depth 1 -exec sudo xattr -rd com.apple.quarantine "{}" \; 2> /dev/null'
 
 # IP addresses
 alias ip="curl ifconfig.co"
@@ -96,11 +97,3 @@ alias tailf='tail -f'
 alias ls="command ls ${LS_OPTIONS}" # Always use color output for `ls`
 alias l='lsd --group-dirs first --long' # list view
 alias ll='lsd --group-dirs first --long --almost-all' # detailed list view
-
-# kn <my-context> to set kubernetes context
-alias kn="kubectl config set-context --current --namespace"
-function kc() {
-  echo "Connecting to running pod for workload '$1'"
-  kubectl exec -it $(kubectl get pod --selector="app=$1" --output jsonpath='{.items[0].metadata.name}') -- bash
-}
-compdef kubectl k

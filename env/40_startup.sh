@@ -5,7 +5,14 @@
 
 source <(kubectl completion zsh)
 alias k=kubectl
+alias kn=kubens
+alias kc=kubectx
+compdef kubectl k
+compdef kubens kn
+compdef kubectx kc
 complete -F kubectl k
+complete -F kubens kn
+complete -F kubectx kc
 
 
 #############################################################################
@@ -31,12 +38,6 @@ eval "$(starship init zsh)"
 #############################################################################
 export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=$(brew --prefix)/share/zsh-syntax-highlighting/highlighters
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-
-#############################################################################
-# Z
-#############################################################################
-source /usr/local/etc/profile.d/z.sh
 
 
 #############################################################################

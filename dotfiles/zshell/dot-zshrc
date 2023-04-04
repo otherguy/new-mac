@@ -1,0 +1,107 @@
+## macOS only
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
+
+# :: Zplug - ZSH plugin manager
+export ZPLUG_HOME=$HOME/.zplug
+
+# Check if zplug is installed
+if [[ ! -d $ZPLUG_HOME ]]; then
+  git clone https://github.com/zplug/zplug $ZPLUG_HOME
+  source $ZPLUG_HOME/init.zsh && zplug update
+fi
+
+# See: https://github.com/eddiezane/lunchy/issues/57
+autoload -U +X bashcompinit && bashcompinit
+autoload -U +X compinit && compinit
+
+# Essential
+source $ZPLUG_HOME/init.zsh
+
+# Let zplug manage zplug
+zplug "zplug/zplug", hook-build:"zplug --self-manage"
+
+# Plugins
+zplug "modules/history",    from:prezto
+zplug "modules/utility",    from:prezto
+zplug "modules/terminal",   from:prezto
+zplug "modules/editor",     from:prezto
+zplug "modules/directory",  from:prezto
+zplug "modules/completion", from:prezto
+
+# zsh users
+zplug "zsh-users/zsh-completions",              defer:0
+zplug "zsh-users/zsh-autosuggestions",          on:"zsh-users/zsh-completions", defer:2
+zplug "zsh-users/zsh-syntax-highlighting",      on:"zsh-users/zsh-autosuggestions", defer:3
+zplug "zsh-users/zsh-history-substring-search", on:"zsh-users/zsh-syntax-highlighting", defer:3
+
+# oh my zsh
+zplug "plugins/macos",             from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
+zplug "plugins/osx",               from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
+zplug "plugins/asdf",              from:oh-my-zsh, if:"[[ $OSTYPE == *darwin* ]]"
+zplug "plugins/zsh_reload",        from:oh-my-zsh
+zplug "plugins/docker",            from:oh-my-zsh
+zplug "plugins/command-not-found", from:oh-my-zsh
+zplug "plugins/colorize",          from:oh-my-zsh
+zplug "plugins/brew",              from:oh-my-zsh, defer:2
+zplug "plugins/brew-cask",         from:oh-my-zsh, defer:2
+zplug "plugins/git",               from:oh-my-zsh, defer:2
+zplug "plugins/fzf",               from:oh-my-zsh, defer:2
+
+# theme
+zplug "themes/agnoster", from:oh-my-zsh, as:theme
+
+# other plugins
+zplug "b4b4r07/enhancd", use:init.sh
+zplug "b4b4r07/httpstat", as:command, use:'(*).sh', rename-to:'$1'
+zplug "b4b4r07/emoji-cli"
+zplug "agkozak/zsh-z"
+export EMOJI_CLI_USE_EMOJI=1
+export EMOJI_CLI_KEYBIND="^e"
+
+#zplug "hidetatz/kubecolor", from:gh-r, as:command, rename-to:kubecolor, use:"*Linux*x86_64*", if:"[[ $OSTYPE == *linux* ]]"
+# zplug "hidetatz/kubecolor", from:gh-r, as:command, rename-to:kubecolor, use:"*Darwin_arm64*", if:"[[ $OSTYPE == *darwin* ]]"
+#zplug "lsd-rs/lsd", from:gh-r, as:command, rename-to:lsd, use:"*apple-da*"
+
+
+# Install plugins if there are plugins that have not been installed
+if ! zplug check; then
+    printf "[zplug] install plugins? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
+
+# Disable [Safe Ops](https://github.com/sorin-ionescu/prezto/blob/master/modules/utility/README.md#safe-ops)
+zstyle ':prezto:module:utility' safe-ops 'no'
+
+# Then, source packages and add commands to $PATH
+zplug load --verbose
+
+# don't expand aliases _before_ completion has finished
+#   like: git comm-[tab]
+# setopt complete_aliases
+unsetopt complete_aliases
+
+# If a pattern for filename generation has no matches, print
+# an error, instead of leaving it unchanged in the argument
+# list. This also applies to file expansion of an initial ~ or =.
+unsetopt nomatch
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+
+alias zshconfig="$EDITOR ~/.zshrc"
+
+#############################################################################
+# Load custom startup scripts
+#############################################################################
+# for f in ~/.dotfiles/env/*; do source $f; done
+source <(cat ~/.dotfiles/env/*)
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"

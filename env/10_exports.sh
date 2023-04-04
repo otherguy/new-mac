@@ -13,7 +13,12 @@ export LC_ALL=en_US.UTF-8
 # Shell Settings
 #############################################################################
 
-export EDITOR="/usr/local/bin/mate -w"
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR="/usr/local/bin/mate -w"
+# fi
 
 # Increase Bash history size. Allow 32³ entries the default is 500.
 export HISTSIZE='32768'
@@ -32,9 +37,6 @@ export MANPAGER='less -X'
 export CLICOLOR=1
 export LS_OPTIONS='-hG'
 export LSCOLORS=GxFxCxDxBxegedabagaced
-
-# Compilation flags
-export ARCHFLAGS="-arch x86_64"
 
 # Umask
 umask 022
@@ -66,11 +68,6 @@ export NODE_REPL_HISTORY_SIZE='32768'
 # Use sloppy mode by default, matching web browsers.
 export NODE_REPL_MODE='sloppy'
 
-#############################################################################
-# NPM
-#############################################################################
-export NPM_TOKEN="24fgX5-kaTnAbdHxrThr3J7ddHSLss2Eg4"
-
 
 #############################################################################
 # GnuPG
@@ -83,13 +80,13 @@ export GPG_TTY=$(tty)
 #############################################################################
 # Google Cloud SDK
 #############################################################################
-export CLOUDSDK_PYTHON="/usr/local/opt/python@3.9/libexec/bin/python"
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+
 
 #############################################################################
 # ASDF Version Manager
 # https://asdf-vm.com/
 #############################################################################
-source /usr/local/opt/asdf/asdf.sh
+source $(brew --prefix asdf)/libexec/asdf.sh

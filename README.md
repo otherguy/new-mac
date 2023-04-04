@@ -11,7 +11,7 @@ The things I do when setting up a new Mac
 - [ ] Symlink (hard link) `hosts` to `/etc/hosts` with `sudo ln -f dotfiles/hosts /etc/hosts`
 - [ ] Restore all [`dotfiles`](dotfiles):
 
-      gfind dotfiles -mindepth 1 -maxdepth 1 -type d | xargs -L1 -I{} basename "{}" | xargs stow --dotfiles --target ~/ --dir dotfiles --adopt
+      gfind dotfiles -mindepth 1 -maxdepth 1 -type d | xargs -L1 -I{} basename "{}" | xargs stow --dotfiles --no-folding --target ~/ --dir dotfiles  --verbose --adopt
 
 - [ ] Reset the repo
 
@@ -90,10 +90,10 @@ gpg-connect-agent updatestartuptty /bye
 - [ ] Block incoming port `80` using Little Snitch
 - [ ] Configure iMessage and Facetime to allow receiving text messages
 
-# iPad 
+# iPad
 
 This also works on iPad with [iSH](https://ish.app):
 
 apk --update add stow gnupg gnupg-scdaemon
 
-find dotfiles -mindepth 1 -maxdepth 1 -type d | xargs -I{} basename "{}" | xargs stow --dotfiles --target ~/ --dir dotfiles
+find dotfiles -mindepth 1 -maxdepth 1 -type d | xargs -I{} basename "{}" | xargs stow --dotfiles --target ~/ --dir dotfiles --no-folding --verbose --adopt

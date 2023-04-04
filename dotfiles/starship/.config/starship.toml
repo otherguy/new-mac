@@ -150,8 +150,7 @@ style = "bold yellow"
 disabled = false
 
 [git_status]
-staged.value = "++"
-staged.style = "green"
+staged = '[++\($count\)](green)'
 
 [golang]
 symbol = " "

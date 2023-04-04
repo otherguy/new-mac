@@ -59,6 +59,7 @@ brew "grc"                      # Colourize logfiles and command output
 brew "grep"
 brew "htop"
 brew "jq"
+brew "lsd"                      # The next gen ls command
 brew "moreutils"                # Install some other useful utilities like `sponge`.
 brew "mtr"                      # Traceroute and ping in a single tool
 brew "neofetch"

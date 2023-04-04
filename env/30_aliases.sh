@@ -94,6 +94,4 @@ alias wget='wget --content-disposition'
 alias tailf='tail -f'
 
 # ls
-alias ls="command ls ${LS_OPTIONS}" # Always use color output for `ls`
-alias l='lsd --group-dirs first --long' # list view
-alias ll='lsd --group-dirs first --long --almost-all' # detailed list view
+alias ls='lsd --group-dirs first' # list view

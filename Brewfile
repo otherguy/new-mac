@@ -173,6 +173,7 @@ whalebrew "otherguy/yamlfix"
 # Casks                                                             #
 #####################################################################
 
+cask "1password-cli"
 cask "aerial"
 cask "appcleaner"
 cask "arc"

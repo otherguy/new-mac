@@ -42,7 +42,7 @@ brew "zlib"
 
 # Development
 brew "act"                     # Run your GitHub Actions locally
-brew "asdf"                    # Extendable version manager with support for Ruby, Node.js, Elixir, Erlang & more
+brew "mise"                    # Extendable version manager with support for Ruby, Node.js, Elixir, Erlang & more
 brew "gomplate"                # Command-line tool for template rendering
 
 # Shell / Terminal

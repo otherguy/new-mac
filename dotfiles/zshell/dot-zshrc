@@ -1,7 +1,4 @@
 ## macOS only
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
-
 # :: Zplug - ZSH plugin manager
 export ZPLUG_HOME=$HOME/.zplug
 
@@ -46,11 +43,8 @@ zplug "plugins/brew",              from:oh-my-zsh, defer:2
 zplug "plugins/brew-cask",         from:oh-my-zsh, defer:2
 zplug "plugins/git",               from:oh-my-zsh, defer:2
 zplug "plugins/fzf",               from:oh-my-zsh, defer:2
-zplug "plugins/asdf",              from:oh-my-zsh, defer:2
-
 
 # other plugins
-zplug "b4b4r07/enhancd", use:init.sh
 zplug "b4b4r07/httpstat", as:command, use:'(*).sh', rename-to:'$1'
 zplug "agkozak/zsh-z"
 
@@ -97,5 +91,32 @@ alias zshconfig="$EDITOR ~/.zshrc"
 # for f in ~/.dotfiles/env/*; do source $f; done
 source <(cat ~/.dotfiles/env/*)
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+# bun completions
+[ -s "/Users/ag/.bun/_bun" ] && source "/Users/ag/.bun/_bun"
+
+# License Vault URL for activation of Jetbrains products at Canva
+export JETBRAINS_LICENSE_SERVER=https://canva.fls.jetbrains.com/
+if [ -e /Users/ag/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/ag/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+[[ ! $(command -v nix) && -e "/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh" ]] && source "/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh"
+alias tf="/Users/ag/work/canva/infrastructure/bin/tf.sh"
+
+# Add Whalebrew to PATH
+export PATH="/opt/whalebrew/bin:$PATH"
+
+# Add Git Extras completion
+source /opt/homebrew/opt/git-extras/share/git-extras/git-extras-completion.zsh
+
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/ag/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
+
+
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
+
+export CLAUDE_CODE_OAUTH_TOKEN="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"
+
+# Activate Mise
+eval "$(GIT_CONFIG_NOSYSTEM=1 mise activate zsh)"
+

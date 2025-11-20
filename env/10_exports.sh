@@ -83,10 +83,3 @@ export GPG_TTY=$(tty)
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
-
-
-#############################################################################
-# ASDF Version Manager
-# https://asdf-vm.com/
-#############################################################################
-source $(brew --prefix asdf)/libexec/asdf.sh

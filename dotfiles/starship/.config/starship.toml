@@ -14,6 +14,7 @@ $package\
 $golang\
 $helm\
 $java\
+$bun\
 $nodejs\
 $perl\
 $php\
@@ -197,9 +198,20 @@ symbol = " "
 [nix_shell]
 symbol = " "
 
+
+[bun]
+format = 'via [$symbol($version )]($style)'
+version_format = 'v${raw}'
+symbol = '🍞 '
+detect_files = ['bun.lockb', 'bunfig.toml']
+style = 'bold red'
+disabled = false
+
 [nodejs]
 symbol = "⬢ "
 style = "bold green"
+detect_files = ['package.json', '.node-version']
+detect_folders = ['node_modules']
 disabled = false
 
 # [package]
@@ -208,7 +220,6 @@ disabled = false
 # disabled = false
 
 [package]
-
 
 [perl]
 symbol = " "

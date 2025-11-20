@@ -62,6 +62,29 @@ Temporary Items
 .idea/**/mongoSettings.xml
 
 #######################################################
+# Visual Studio Code
+# Created by https://www.gitignore.io/api/VisualStudioCode
+# Edit at https://www.gitignore.io/?templates=VisualStudioCode
+#######################################################
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
+#######################################################
 # Project Globals
 #######################################################
 

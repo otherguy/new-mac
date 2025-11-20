@@ -1,7 +1,7 @@
 [user]
-  name       = Alexander Graf
-  email      = alex@basecamp.tirol
-  signingkey = 668129A8E092BECBFEE8837FD40F1F367EB4BE99
+  name = Alexander Graf
+  email = ag@canva.com
+  signingkey = E62A9007DA72B17E057A1D4EAFB4B60E24B52890
 
 [alias]
   # View abbreviated SHA, description, and history graph of the latest 20 commits
@@ -20,6 +20,8 @@
   # Pull in remote changes for the current repository and all its submodules
   p = !"git pull --rebase; git submodule foreach git pull origin master"
 
+	prune-local = !"git fetch --all --prune && for branch in $(git branch | sed 's/\\*//'); do if [ -z \"$(git branch --all | grep remotes/origin/$branch)\" ]; then git branch -D $branch; fi; done"
+
   # Clone a repository including all submodules
   c = clone --recursive
 
@@ -27,6 +29,8 @@
   ca = !git add -A && git commit -av
 
   cm = commit -m
+
+  cai = "!~/.dotfiles/scripts/ai_git_commit.sh"
 
   # Switch to a branch, creating it if necessary
   go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
@@ -123,6 +127,10 @@
   # https://git-scm.com/docs/git-update-index#_untracked_cache
   untrackedCache = true
 
+  # Install with Homebrew: `brew install git-delta`
+  pager = delta
+	fsmonitor = true
+
 [color]
   # Use colors in Git commands that are capable of colored output when
   # outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
@@ -148,6 +156,7 @@
   # https://help.github.com/articles/signing-commits-using-gpg/
   # https://gist.github.com/scisco/e6aad7393f19147266f9385f320ae27a
 	gpgsign = true
+	template = /Users/ag/.gitmessage
 
 #[gpg]
 #	program = /opt/homebrew/bin/gpg
@@ -155,7 +164,7 @@
 [diff]
   # Detect copies as well as renames
   renames = copies
-  tool = Kaleidoscope
+	tool = Kaleidoscope
 
 [diff "bin"]
   # Use `hexdump` to diff binary files
@@ -168,26 +177,30 @@
 [merge]
   # Include summaries of merged commits in newly created merge commit messages
   log = true
-  tool = /usr/local/bin/ksdiff
+	tool = Kaleidoscope
 
 [push]
   # https://git-scm.com/docs/git-config#git-config-pushdefault
   default = simple
   # Make `git push` push relevant annotated tags when pushing branches out.
   followTags = true
+	default = current
+	autoSetupRemote = true
 
 [mergetool]
   keepBackup = true
-  prompt = false
+	prompt = false
 [mergetool "Kaleidoscope"]
-  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
   trustexitcode = true
 
+	trustExitCode = true
 [difftool "Kaleidoscope"]
-  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [difftool]
-  prompt = false
+	prompt = false
 
+	trustExitCode = true
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
@@ -197,9 +210,9 @@
 # URL shorthands
 
 [url "git@github.com:"]
-  insteadOf = "gh:"
   pushInsteadOf = "github:"
   pushInsteadOf = "git://github.com/"
+	insteadOf = https://github.com/
 
 [url "git://github.com/"]
   insteadOf = "github:"
@@ -211,6 +224,13 @@
 
 [url "git://gist.github.com/"]
   insteadOf = "gist:"
-
-[url "git@github.com:"]
-  insteadOf = "https://github.com/"
+[gpg]
+	program = /opt/homebrew/bin/gpg
+[init]
+	defaultBranch = main
+[protocol]
+	version = 2
+[trace2]
+	eventTarget = af_unix:dgram:/tmp/olly-git-trace2.sock
+[maintenance]
+	repo = /Users/ag/work/flagsmith-charts

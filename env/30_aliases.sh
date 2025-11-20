@@ -24,7 +24,7 @@ alias showDesktop="defaults write com.apple.finder CreateDesktop -bool true && k
 # Lock the screen (when going AFK)
 #alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 alias lock='osascript -e "tell application \"System Events\" to keystroke \"q\" using {command down,control down}"'
-alias sleep="pmset displaysleepnow"
+#alias isleep="pmset displaysleepnow"
 alias afk=lock
 
 # Gatekeeper (for installing 3rd party apps)
@@ -48,7 +48,7 @@ alias egrep='egrep --color=auto'
 alias week='date +%V'
 
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias upgrade='mas upgrade; brew update; brew upgrade; brew cu --all --yes --cleanup; brew cleanup; asdf plugin update --all; sudo chown $(id -un):$(id -ng) /Applications/*; find /Applications -name "*.app" -depth 1 -exec sudo xattr -rd com.apple.quarantine "{}" \; 2> /dev/null'
+alias upgrade='mas upgrade; brew update; brew upgrade; brew cu --all --yes --cleanup; brew cleanup; sudo chown $(id -un):$(id -ng) /Applications/*; find /Applications -name "*.app" -depth 1 -exec sudo xattr -rd com.apple.quarantine "{}" \; 2> /dev/null'
 
 # IP addresses
 alias ip="curl ifconfig.co"

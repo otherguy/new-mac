@@ -22,12 +22,11 @@ The things I do when setting up a new Mac
 - [ ] Transfer `.gnupg` keyring and `.ssh` key files
 - [ ] [Disable Ruby documentation parsing](http://mts.io/2015/04/19/fix-slow-gem-install/)
 - [ ] Add `auth sufficient pam_tid.so` to `/etc/pam.d/sudo` for biometric `sudo` authentication
-- [ ] Install [programming languages with `sh ./asdf.sh`](asdf.sh).
+- [ ] Install [programming languages with `sh ./mise.sh`](mise.sh).
 - [ ] ﹗ Reboot
 - [ ] Configure 1Password and let it synch
 
 - [ ] Install and configure [Dropbox](https://www.dropbox.com/install) and let it sync
-
 
 Learn the YubiKey serial number and create the stubs to point to the GPG keyID and Yubikey Serial number
 

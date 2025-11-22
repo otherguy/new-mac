@@ -21,6 +21,7 @@ tap "qmk/qmk"                               # QMK firmware CLI tap for mechanica
 brew "starship"                             # Cross-shell prompt for astronauts; The minimal, blazing-fast, and infinitely customizable prompt for any shell!
 brew "stow"                                 # Organize software neatly under a single directory tree (e.g. /usr/local); Organize your dotfiles
 brew "zplug"                                # Next-generation plugin manager for zsh; A next-generation plugin manager for zsh
+brew "topgrade"                             # Upgrade all the things; Upgrade all the things - package managers, applications, OSes, etc.
 
 # Build tools
 brew "autoconf"                             # Automatic configure script builder
@@ -149,6 +150,7 @@ brew "webp"                                 # Image format providing lossless an
 
 # Utilities
 brew "doctl"                                # Command-line tool for DigitalOcean; DigitalOcean command line interface
+brew "dockutil"                             # Command-line utility for managing macOS Dock items
 brew "fileicon"                             # macOS CLI for managing custom icons for files and folders
 brew "gpsbabel"                             # Converts/uploads GPS waypoints, tracks, and routes
 brew "mas"                                  # Mac App Store command-line interface
@@ -212,6 +214,7 @@ cask "appcleaner"                           # Application uninstaller
 cask "balenaetcher"                         # Tool to flash OS images to SD cards & USB drives
 cask "brooklyn"                             # Screen saver based on animations presented during Apple Special Event Brooklyn
 cask "calibre"                              # E-books management software
+cask "chatgpt"                              # ChatGPT desktop app
 cask "claude"                               # Anthropic's official Claude AI desktop app
 cask "discord"                              # Voice and text chat software
 cask "docker-desktop"

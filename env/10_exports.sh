@@ -78,10 +78,8 @@ export NODE_REPL_MODE='sloppy'
 # https://stackoverflow.com/a/42265848/96656
 export GPG_TTY=$(tty)
 
+#############################################################################
+# Custom .dotfiles path
+#############################################################################
 
-#############################################################################
-# Google Cloud SDK
-#############################################################################
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
-export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+DOTFILES_DIR="${HOME}/.dotfiles/"

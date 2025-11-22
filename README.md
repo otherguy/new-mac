@@ -20,11 +20,15 @@ The things I do when setting up a new Mac
 
         git reset .
 
-- [ ] Run [`.macos`](.macos) file `source .macos`
+- [ ]  Set macOS Dock items and system defaults:
+
+        dot dock
+        dot macos
+
 - [ ] Transfer `.gnupg` keyring and `.ssh` key files
 - [ ] Add `auth sufficient pam_tid.so` to `/etc/pam.d/sudo` for biometric `sudo` authentication
 - [ ] Install [programming languages with `sh ./mise.sh`](mise.sh).
-- [ ] ﹗ Reboot
+- [ ] ❗ Reboot
 - [ ] Configure 1Password and let it sync
 - [ ] Install and configure [~Dropbox~ Maestral](https://www.dropbox.com/install) and let it sync
 
@@ -39,9 +43,10 @@ gpg --card-edit
 gpg-connect-agent "scd serialno" "learn --force" /bye
 gpg-connect-agent updatestartuptty /bye
 ```
-## Alfred
 
-- [ ] Configure [Alfred](https://www.alfredapp.com/) and enable it for `⌘`-double tap
+## Raycast
+
+- [ ] Configure [Raycast](https://www.raycast.com) and enable it for `⌘`-double tap
 - [ ] Enable sync via Dropbox
 
 ## Visual Studio Code
@@ -82,8 +87,7 @@ gpg-connect-agent updatestartuptty /bye
 
 ## Other
 
-- [ ] Transfer iMessages history (`~/Library/Messages`)
-- [ ] Add email to lock message in `Security & Privacy` settings
+- [ ] Add email to lock message in `Show Message when Locked` in `Lock Screen` settings
 - [ ] Disable Siri system wide, and remove Siri button from touch bar
 - [ ] Disable Fantastical Advanced setting `Go to today after adding items`
 - [ ] Block incoming port `80` using Little Snitch

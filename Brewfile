@@ -222,10 +222,12 @@ cask "fantastical"                          # Calendar software
 cask "fliqlo"                               # Flip clock screensaver
 cask "garmin-express"                       # Update maps and software, sync with Garmin Connect and register your device
 cask "gpg-suite"                            # Tools to protect your emails and files
+cask "hazel"                                # Automate repetitive tasks on your Mac
 cask "iterm2"
 cask "kaleidoscope"                         # Spot and merge differences in text and image files or folders
 cask "macfuse"
 cask "maestral"                             # Open-source Dropbox client
+cask "micro-snitch"                         # Monitor and notify when your microphone or camera is activated
 cask "lindell/multi-gitter/multi-gitter"    # Update multiple repositories in bulk
 cask "optimage"
 cask "rapidapi"                             # HTTP client that helps testing and describing APIs

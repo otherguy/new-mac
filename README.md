@@ -60,37 +60,23 @@ gpg-connect-agent updatestartuptty /bye
 ## Install and configure
 
 - [ ] [Apple TV Aerial Views Screen Saver](https://github.com/JohnCoates/Aerial)
-- [ ] [Apple Watch `pam.d` auth plugin](https://github.com/biscuitehh/pam-watchid) (`pam_tid.so` needs to be first)
-- [ ] [Apple watch screensaver](http://www.rasmusnielsen.dk/applewatch/)
-- [ ] [Bartender](https://www.macbartender.com/)
 - [ ] [Fantastical](https://flexibits.com/fantastical)
 - [ ] [GPG Suite](https://gpgtools.org)
 - [ ] [Hazel](https://www.noodlesoft.com) (and sync rules with Dropbox)
-- [ ] [Ledger Live](https://www.ledger.com/ledger-live)
-- [ ] [LiteIcon](http://freemacsoft.net/liteicon/)
 - [ ] [Little Snitch](https://www.obdev.at/products/littlesnitch/index.html)
-- [ ] [MailSuite](https://smallcubed.com)
 - [ ] [Micro Snitch](https://www.obdev.at/products/microsnitch/index.html)
-- [ ] [Pock](https://pock.dev)
 - [ ] [Raycast](https://raycast.com)
 - [ ] [Rubitrack](https://www.rubitrack.com)
 - [ ] [Shifty](https://shifty.natethompson.io/en/)
 - [ ] [Stop the Madness](https://underpassapp.com/StopTheMadness/)
-- [ ] [TamperMonkey](https://www.tampermonkey.net)
 - [ ] [Termius](https://termius.com)
 - [ ] [Things](https://culturedcode.com/things/)
 - [ ] [Viscosity](https://www.sparklabs.com/viscosity/)
-
-## Dock
-
-- [ ] Add commonly used apps to the Dock
 
 ## Other
 
 - [ ] Add email to lock message in `Show Message when Locked` in `Lock Screen` settings
 - [ ] Disable Siri system wide, and remove Siri button from touch bar
-- [ ] Disable Fantastical Advanced setting `Go to today after adding items`
-- [ ] Block incoming port `80` using Little Snitch
 - [ ] Configure iMessage and Facetime to allow receiving text messages
 
 # iPad

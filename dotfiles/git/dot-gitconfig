@@ -1,7 +1,7 @@
 [user]
-  name = Alexander Graf
-  email = ag@canva.com
-  signingkey = E62A9007DA72B17E057A1D4EAFB4B60E24B52890
+	name = Alexander Graf
+	email = alex@basecamp.tirol
+	signingkey = 668129A8E092BECBFEE8837FD40F1F367EB4BE99
 
 [alias]
   # View abbreviated SHA, description, and history graph of the latest 20 commits
@@ -226,6 +226,7 @@
   insteadOf = "gist:"
 [gpg]
 	program = /opt/homebrew/bin/gpg
+	format = openpgp
 [init]
 	defaultBranch = main
 [protocol]

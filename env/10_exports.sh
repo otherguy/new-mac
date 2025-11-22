@@ -54,6 +54,8 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 # Install casks to /Applications
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
+export HOMEBREW_NO_ENV_HINTS="true"
+
 
 #############################################################################
 # NodeJs

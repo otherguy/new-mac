@@ -190,15 +190,14 @@ cask "font-roboto"                          # Roboto
 cask "font-sf-mono"                         # San Francisco Mono
 cask "font-source-code-pro-for-powerline"   # Source Code Pro for Powerline
 cask "font-source-code-pro"                 # Source Code Pro
-cask "font-source-sans-pro"                 # Source Sans Pro
-cask "font-source-serif-pro"                # Source Serif Pro
 
 #####################################################################
 # Whalebrew                                                         #
 #####################################################################
 
-whalebrew "otherguy/pokemonsay"
-whalebrew "otherguy/yamlfix"
+# !!! Temporarily disabled
+# whalebrew "otherguy/pokemonsay"
+# whalebrew "otherguy/yamlfix"
 
 #####################################################################
 # Casks                                                             #
@@ -215,7 +214,7 @@ cask "brooklyn"                             # Screen saver based on animations p
 cask "calibre"                              # E-books management software
 cask "claude"                               # Anthropic's official Claude AI desktop app
 cask "discord"                              # Voice and text chat software
-cask "docker"
+cask "docker-desktop"
 cask "fantastical"                          # Calendar software
 cask "fliqlo"                               # Flip clock screensaver
 cask "garmin-express"                       # Update maps and software, sync with Garmin Connect and register your device
@@ -248,7 +247,6 @@ cask "vlc"
 mas "1Password for Safari", id: 1569813296
 mas "AquaColorFix", id: 1579618383
 mas "DiveLogDT", id: 411603212
-mas "Glean", id: 6448766375
 mas "Hush", id: 1544743900
 mas "Irvue", id: 1039633667
 mas "Keynote", id: 409183694
@@ -257,7 +255,6 @@ mas "Mela", id: 1568924476
 mas "Name Mangler 3", id: 603637384
 mas "Numbers", id: 409203825
 mas "Obsidian Web Clipper", id: 6720708363
-mas "Okta Verify", id: 490179405
 mas "Pages", id: 409201541
 mas "Pieoneer", id: 6739781207
 mas "PiPifier", id: 1160374471

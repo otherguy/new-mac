@@ -236,12 +236,10 @@ cask "textmate"                             # General-purpose text editor
 cask "tower"                                # Git client focusing on power and productivity
 cask "transmission"                         # Open-source BitTorrent client
 cask "tunnelbear"                           # VPN client for secure internet access and private browsing
-cask "twitch"
 cask "vial"                                 # Configurator of compatible keyboards in real time
 cask "viscosity"                            # OpenVPN client with AppleScript support
 cask "visual-studio-code"
 cask "vlc"
-cask "yubico-yubikey-manager"
 
 #####################################################################
 # macOS App Store                                                   #

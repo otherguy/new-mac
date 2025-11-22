@@ -16,20 +16,17 @@ The things I do when setting up a new Mac
 
       gfind dotfiles -mindepth 1 -maxdepth 1 -type d | xargs -L1 -I{} basename "{}" | xargs stow --dotfiles --no-folding --target ~/ --dir dotfiles  --verbose --adopt
 
-- [ ] Reset the repo
+- [ ] Reset the repo to apply the dotfiles from upstream
 
         git reset .
 
-- [ ] _Optional, on work computer:_ `brew bundle install --no-lock --verbose --file=Brewfile-work`
 - [ ] Run [`.macos`](.macos) file `source .macos`
 - [ ] Transfer `.gnupg` keyring and `.ssh` key files
-- [ ] [Disable Ruby documentation parsing](http://mts.io/2015/04/19/fix-slow-gem-install/)
 - [ ] Add `auth sufficient pam_tid.so` to `/etc/pam.d/sudo` for biometric `sudo` authentication
 - [ ] Install [programming languages with `sh ./mise.sh`](mise.sh).
 - [ ] ﹗ Reboot
-- [ ] Configure 1Password and let it synch
-
-- [ ] Install and configure [Dropbox](https://www.dropbox.com/install) and let it sync
+- [ ] Configure 1Password and let it sync
+- [ ] Install and configure [~Dropbox~ Maestral](https://www.dropbox.com/install) and let it sync
 
 Learn the YubiKey serial number and create the stubs to point to the GPG keyID and Yubikey Serial number
 

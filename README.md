@@ -6,6 +6,7 @@ The things I do when setting up a new Mac
 
 - [ ] Set up Touch ID
 - [ ] Install XCode command line tools with `xcode-select --install`
+- [ ] Install Rosetta 2 with `sudo softwareupdate --install-rosetta`
 - [ ] Install [homebrew](https://brew.sh)
 - [ ] Install GitHub's `gh` utility with `brew install gh` and login with `gh auth login`
 - [ ] Clone this repo: `gh repo clone otherguy/new-mac ~/.dotfiles`

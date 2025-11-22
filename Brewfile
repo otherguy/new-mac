@@ -210,7 +210,6 @@ cask "adobe-dng-converter"
 cask "aerial"                               # Apple TV Aerial screensaver
 cask "android-platform-tools"               # Android SDK component
 cask "appcleaner"                           # Application uninstaller
-cask "arduino"
 cask "balenaetcher"                         # Tool to flash OS images to SD cards & USB drives
 cask "brooklyn"                             # Screen saver based on animations presented during Apple Special Event Brooklyn
 cask "calibre"                              # E-books management software

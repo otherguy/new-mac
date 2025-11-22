@@ -5,8 +5,6 @@
 # Taps                                                              #
 #####################################################################
 
-tap "homebrew/bundle"                       # Tap providing the brew bundle command set
-tap "homebrew/services"                     # Tap that adds brew services management helpers
 tap "lindell/multi-gitter"                  # Tap for the multi-gitter Git automation CLI
 tap "cloudflare/cloudflare"                 # Cloudflare developer tools and CLIs tap
 tap "derailed/popeye"                       # Tap packaging the Popeye Kubernetes scanner

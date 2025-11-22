@@ -124,7 +124,6 @@ brew "kubeconform"                          # FAST Kubernetes manifests validato
 brew "kubectx"                              # Tool that can switch between kubectl contexts easily and create aliases
 brew "kubeseal"                             # Kubernetes controller and tool for one-way encrypted Secrets
 brew "kustomize"                            # Template-free customization of Kubernetes YAML manifests
-brew "lindell/multi-gitter/multi-gitter"    # Update multiple repositories in bulk
 brew "popeye"                               # Kubernetes cluster resource sanitizer
 brew "stern"                                # Tail multiple Kubernetes pods & their containers
 
@@ -227,6 +226,7 @@ cask "iterm2"
 cask "kaleidoscope"                         # Spot and merge differences in text and image files or folders
 cask "macfuse"
 cask "maestral"                             # Open-source Dropbox client
+cask "lindell/multi-gitter/multi-gitter"    # Update multiple repositories in bulk
 cask "optimage"
 cask "rapidapi"                             # HTTP client that helps testing and describing APIs
 cask "raycast"                              # Control your tools with a few keystrokes

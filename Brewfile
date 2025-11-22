@@ -218,7 +218,6 @@ cask "discord"                              # Voice and text chat software
 cask "docker"
 cask "fantastical"                          # Calendar software
 cask "fliqlo"                               # Flip clock screensaver
-cask "fritzing"
 cask "garmin-express"                       # Update maps and software, sync with Garmin Connect and register your device
 cask "gpg-suite"                            # Tools to protect your emails and files
 cask "iterm2"

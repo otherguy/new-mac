@@ -1,45 +1,31 @@
 #!/bin/sh
 
 # Plugins
-asdf plugin add crystal
-asdf plugin add nodejs
-asdf plugin add php
-asdf plugin add perl
-asdf plugin add python
-asdf plugin add ruby
-asdf plugin add golang
-asdf plugin add rust
-asdf plugin add terraform
-asdf plugin add terraform-ls
+mise plugin add crystal
+mise plugin add nodejs
+mise plugin add php
+mise plugin add perl
+mise plugin add python
+mise plugin add ruby
+mise plugin add golang
+mise plugin add rust
+mise plugin add terraform
+mise plugin add terraform-ls
 
 # Ruby
-asdf install ruby 2.7.7
-asdf install ruby 3.2.1
+mise install ruby 3.4.7
 
 # Crystal
-asdf install crystal 1.7.3
+mise install crystal 1.18.2
 
 # NodeJS
-asdf install nodejs 14.21.3
-asdf install nodejs 16.19.1
-asdf install nodejs 19.8.1
+mise install nodejs 24.11.1
 
 # Python
-asdf install python 3.8.12
-asdf install python 3.9.9
-asdf install python 3.11.2
+mise install python 3.14.0
 
 # PHP
-asdf install php 8.2.3
-
-# Rust
-asdf install rust 1.68.1
+mise install php 8.5.0
 
 # Go
-asdf install golang 1.20.2
-
-# Terraform
-asdf install terraform 1.4.2
-
-# Terraform Language Server
-asdf install terraform-ls 0.30.3
+mise install golang 1.25.4

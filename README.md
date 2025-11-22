@@ -16,11 +16,10 @@ The things I do when setting up a new Mac
 
       gfind dotfiles -mindepth 1 -maxdepth 1 -type d | xargs -L1 -I{} basename "{}" | xargs stow --dotfiles --no-folding --target ~/ --dir dotfiles  --verbose --adopt
 
-- [ ] Reset the repo
+- [ ] Reset the repo to apply the dotfiles from upstream
 
         git reset .
 
-- [ ] _Optional, on work computer:_ `brew bundle install --no-lock --verbose --file=Brewfile-work`
 - [ ] Run [`.macos`](.macos) file `source .macos`
 - [ ] Transfer `.gnupg` keyring and `.ssh` key files
 - [ ] [Disable Ruby documentation parsing](http://mts.io/2015/04/19/fix-slow-gem-install/)

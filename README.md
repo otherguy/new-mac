@@ -7,7 +7,9 @@ The things I do when setting up a new Mac
 - [ ] Set up Touch ID
 - [ ] Install XCode command line tools with `xcode-select --install`
 - [ ] Install [homebrew](https://brew.sh)
-- [ ] Install [Brewfile](Brewfile) with `brew bundle install --no-lock`
+- [ ] Install GitHub's `gh` utility with `brew install gh` and login with `gh auth login`
+- [ ] Clone this repo: `gh repo clone otherguy/new-mac ~/.dotfiles`
+- [ ] Install [Brewfile](Brewfile) with `brew bundle install`
 - [ ] Symlink (hard link) `hosts` to `/etc/hosts` with `sudo ln -f dotfiles/hosts /etc/hosts`
 - [ ] Restore all [`dotfiles`](dotfiles):
 

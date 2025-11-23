@@ -50,3 +50,9 @@ eval "$(gh completion -s zsh)"
 # iTerm Shell Integration
 #############################################################################
 test -e "${HOME}/.iterm2_shell_integration.`basename $SHELL`" && source "${HOME}/.iterm2_shell_integration.`basename $SHELL`"
+
+
+#############################################################################
+# Folderify Shell Integration
+#############################################################################
+ source <(folderify --completions zsh) # zsh

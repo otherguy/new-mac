@@ -3,7 +3,7 @@
 BIN_NAME=$(basename "$0")
 COMMAND_NAME=$1
 SUB_COMMAND_NAME=$2
-DOTFILES_DIR="${HOME}/.dotfiles"
+DOTFILES_DIR="${HOME}/.dotfiles/"
 
 sub_help () {
   echo "Usage: $BIN_NAME <command>"
@@ -15,6 +15,7 @@ sub_help () {
   echo "   edit             Open dotfiles in IDE ($VISUAL) and Git GUI ($VISUAL_GIT)"
   echo "   help             This help message"
   echo "   macos            Apply macOS system defaults"
+  echo "   icons            macOS app and folder icons"
   echo "   test             Run tests"
   echo "   update           Update packages and pkg managers (brew, casks, cargo, pip3, npm, gems, macOS)"
 }
@@ -32,6 +33,10 @@ sub_clean () {
 
 sub_dock () {
   . "${DOTFILES_DIR}/macos/dock.sh" && echo "Dock reloaded."
+}
+
+sub_icons () {
+  . "${DOTFILES_DIR}/macos/icons.sh" && echo "Icons applied."
 }
 
 sub_edit () {

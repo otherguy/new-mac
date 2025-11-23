@@ -61,6 +61,7 @@ brew "dialog"                               # Display user-friendly message boxe
 brew "direnv"                               # Load/unload environment variables based on $PWD
 brew "fblog"                                # Small command-line JSON log viewer
 brew "findutils"                            # Collection of GNU find, xargs, and locate; Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
+brew "folderify"                            # Create custom icons for folders in macOS
 brew "fzf"                                  # Command-line fuzzy finder written in Go
 brew "gawk"                                 # GNU awk utility
 brew "gnu-sed"                              # GNU implementation of the famous stream editor; Install GNU `sed` as gsed
@@ -216,6 +217,7 @@ cask "brooklyn"                             # Screen saver based on animations p
 cask "calibre"                              # E-books management software
 cask "chatgpt"                              # ChatGPT desktop app
 cask "claude"                               # Anthropic's official Claude AI desktop app
+cask "claude-code"                          # Anthropic's official Claude Code desktop app
 cask "discord"                              # Voice and text chat software
 cask "docker-desktop"
 cask "fantastical"                          # Calendar software

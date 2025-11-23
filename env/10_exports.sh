@@ -13,12 +13,12 @@ export LC_ALL=en_US.UTF-8
 # Shell Settings
 #############################################################################
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR="/usr/local/bin/mate -w"
-# fi
+#Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR="nano"
+else
+  export EDITOR="/usr/local/bin/mate -w"
+fi
 
 # Increase Bash history size. Allow 32³ entries the default is 500.
 export HISTSIZE='32768'
@@ -54,6 +54,7 @@ export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 # Install casks to /Applications
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
+# Disable Homebrew environment hints
 export HOMEBREW_NO_ENV_HINTS="true"
 
 
@@ -83,3 +84,4 @@ export GPG_TTY=$(tty)
 #############################################################################
 
 DOTFILES_DIR="${HOME}/.dotfiles/"
+export PATH="${PATH}:${DOTFILES_DIR}bin/"

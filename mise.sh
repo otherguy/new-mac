@@ -2,13 +2,8 @@
 
 # Plugins
 mise plugin add crystal
-mise plugin add nodejs
 mise plugin add php
 mise plugin add perl
-mise plugin add python
-mise plugin add ruby
-mise plugin add golang
-mise plugin add rust
 mise plugin add terraform
 mise plugin add terraform-ls
 

@@ -24,6 +24,7 @@ The things I do when setting up a new Mac
 
         dot dock
         dot macos
+        dot icons
 
 - [ ] Transfer `.gnupg` keyring and `.ssh` key files
 - [ ] Add `auth sufficient pam_tid.so` to `/etc/pam.d/sudo` for biometric `sudo` authentication

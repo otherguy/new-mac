@@ -218,6 +218,7 @@ cask "calibre"                              # E-books management software
 cask "chatgpt"                              # ChatGPT desktop app
 cask "claude"                               # Anthropic's official Claude AI desktop app
 cask "claude-code"                          # Anthropic's official Claude Code desktop app
+cask "codex"                                # OpenAI Codex app
 cask "discord"                              # Voice and text chat software
 cask "docker-desktop"
 cask "fantastical"                          # Calendar software

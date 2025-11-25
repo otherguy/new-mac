@@ -20,12 +20,10 @@ else
   export EDITOR="/usr/local/bin/mate -w"
 fi
 
-# Increase Bash history size. Allow 32³ entries the default is 500.
-export HISTSIZE='32768'
-export HISTFILESIZE="${HISTSIZE}"
-
-# Omit duplicates and commands that begin with a space from history.
-export HISTCONTROL='ignoreboth'
+# Disable history, we're using Atuin
+export HISTSIZE=0
+export SAVEHIST=0
+unset HISTFILE
 
 # Highlight section titles in manual pages.
 export LESS_TERMCAP_md="${yellow}"
@@ -85,3 +83,8 @@ export GPG_TTY=$(tty)
 
 DOTFILES_DIR="${HOME}/.dotfiles/"
 export PATH="${PATH}:${DOTFILES_DIR}bin/"
+
+#############################################################################
+# Whalebrew
+#############################################################################
+export PATH="/opt/whalebrew/bin:$PATH"

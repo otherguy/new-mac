@@ -45,14 +45,19 @@ brew "act"                                  # Run your GitHub Actions locally
 brew "ast-grep"                             # Code searching, linting, rewriting
 brew "cocoapods"                            # Dependency manager for Cocoa projects
 brew "gomplate"                             # Command-line Golang template processor; Command-line tool for template rendering
+brew "hivemind"                             # Process manager for Procfile-based apps
 brew "llm"                                  # Access large language models from the command-line
 brew "markdownlint-cli2"                    # Fast, flexible, config-based cli for linting Markdown/CommonMark files
 brew "mise"                                 # Polyglot runtime manager (asdf rust clone); Extendable version manager with support for Ruby, Node.js, Elixir, Erlang & more
 brew "mongodb/brew/mongodb-database-tools"  # This package contains standard utilities for interacting with MongoDB.
+brew "neofetch"                             # Fast, highly customizable system info script
+brew "overmind"                             # Process manager for Procfile-based apps (tmux-based)
 brew "sonar-scanner"                        # Launcher to analyze a project with SonarQube
 brew "tokei"                                # Program that allows you to count code, quickly
+brew "watchexec"                            # Execute commands when watched files change
 
 # Shell / Terminal
+brew "atuin"                                # Shell history replacement with sync
 brew "colordiff"                            # Color-highlighted diff(1) output
 brew "coreutils"                            # GNU File, Shell, and Text utilities
 brew "curl"                                 # Get a file from an HTTP, HTTPS or FTP server
@@ -62,6 +67,7 @@ brew "direnv"                               # Load/unload environment variables 
 brew "fblog"                                # Small command-line JSON log viewer
 brew "findutils"                            # Collection of GNU find, xargs, and locate; Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
 brew "folderify"                            # Create custom icons for folders in macOS
+brew "fswatch"                              # File change monitor
 brew "fzf"                                  # Command-line fuzzy finder written in Go
 brew "gawk"                                 # GNU awk utility
 brew "gnu-sed"                              # GNU implementation of the famous stream editor; Install GNU `sed` as gsed
@@ -216,21 +222,24 @@ cask "balenaetcher"                         # Tool to flash OS images to SD card
 cask "brooklyn"                             # Screen saver based on animations presented during Apple Special Event Brooklyn
 cask "calibre"                              # E-books management software
 cask "chatgpt"                              # ChatGPT desktop app
-cask "claude"                               # Anthropic's official Claude AI desktop app
 cask "claude-code"                          # Anthropic's official Claude Code desktop app
+cask "claude"                               # Anthropic's official Claude AI desktop app
+cask "codex"                                # OpenAI Codex CLI
 cask "discord"                              # Voice and text chat software
 cask "docker-desktop"
 cask "fantastical"                          # Calendar software
 cask "fliqlo"                               # Flip clock screensaver
 cask "garmin-express"                       # Update maps and software, sync with Garmin Connect and register your device
+cask "google-chrome"                        # Web browser
 cask "gpg-suite"                            # Tools to protect your emails and files
 cask "hazel"                                # Automate repetitive tasks on your Mac
 cask "iterm2"
 cask "kaleidoscope"                         # Spot and merge differences in text and image files or folders
+cask "lindell/multi-gitter/multi-gitter"    # Update multiple repositories in bulk
 cask "macfuse"
 cask "maestral"                             # Open-source Dropbox client
 cask "micro-snitch"                         # Monitor and notify when your microphone or camera is activated
-cask "lindell/multi-gitter/multi-gitter"    # Update multiple repositories in bulk
+cask "neohtop"                              # Modern system monitor
 cask "optimage"
 cask "rapidapi"                             # HTTP client that helps testing and describing APIs
 cask "raycast"                              # Control your tools with a few keystrokes

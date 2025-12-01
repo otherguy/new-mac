@@ -211,12 +211,14 @@ cask "font-source-code-pro"                 # Source Code Pro
 #####################################################################
 # Casks                                                             #
 #####################################################################
+
 cask "1password-cli"
 cask "1password"
 cask "adobe-creative-cloud"
 cask "adobe-dng-converter"
 cask "aerial"                               # Apple TV Aerial screensaver
 cask "android-platform-tools"               # Android SDK component
+cask "antigravity"                          # Google's AI-powered development IDE
 cask "appcleaner"                           # Application uninstaller
 cask "balenaetcher"                         # Tool to flash OS images to SD cards & USB drives
 cask "brooklyn"                             # Screen saver based on animations presented during Apple Special Event Brooklyn

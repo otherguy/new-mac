@@ -257,6 +257,7 @@ cask "vial"                                 # Configurator of compatible keyboar
 cask "viscosity"                            # OpenVPN client with AppleScript support
 cask "visual-studio-code"
 cask "vlc"
+cask "zoom"                                 # Video communication and virtual meeting platform
 
 #####################################################################
 # macOS App Store                                                   #

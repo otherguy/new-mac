@@ -47,9 +47,6 @@ alias egrep='egrep --color=auto'
 # Get week number
 alias week='date +%V'
 
-# Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
-alias upgrade='mas upgrade; brew update; brew upgrade; brew cu --all --yes --cleanup; brew cleanup; sudo chown $(id -un):$(id -ng) /Applications/*; find /Applications -name "*.app" -depth 1 -exec sudo xattr -rd com.apple.quarantine "{}" \; 2> /dev/null'
-
 # IP addresses
 alias ip="curl ifconfig.co"
 alias localip="ipconfig getifaddr en0"

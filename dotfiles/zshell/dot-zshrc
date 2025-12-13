@@ -46,10 +46,6 @@ zplug "plugins/fzf",               from:oh-my-zsh, defer:2
 zplug "b4b4r07/httpstat", as:command, use:'(*).sh', rename-to:'$1'
 zplug "agkozak/zsh-z"
 
-zplug "hidetatz/kubecolor", from:gh-r, as:command, rename-to:kubecolor, use:"*Linux*x86_64*", if:"[[ $OSTYPE == *linux* ]]"
-zplug "hidetatz/kubecolor", from:gh-r, as:command, rename-to:kubecolor, use:"*Darwin_arm64*", if:"[[ $OSTYPE == *darwin* ]]"
-
-
 # Install plugins if there are plugins that have not been installed
 if ! zplug check; then
     printf "[zplug] install plugins? [y/N]: "
@@ -88,4 +84,3 @@ alias zshconfig="$EDITOR ~/.zshrc"
 #############################################################################
 # for f in ~/.dotfiles/env/*; do source $f; done
 source <(cat ~/.dotfiles/env/*.sh)
-

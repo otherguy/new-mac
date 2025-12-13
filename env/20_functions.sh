@@ -291,3 +291,19 @@ function gcloud_select() {
     echo "gcloud: switching to project ${selected_project}"
     gcloud config set project "${selected_project}"
 }
+
+# YubiKey helper - run after swapping cards
+# Detects the currently inserted YubiKey and updates GPG stubs to use it
+# Usage: yubikey-detect
+function yubikey-detect() {
+    echo "Detecting YubiKey..."
+    gpg-connect-agent "scd serialno" /bye > /dev/null 2>&1
+    gpg-connect-agent "LEARN --force" /bye > /dev/null 2>&1
+    local serial=$(gpg --card-status 2>/dev/null | grep "Serial number" | awk '{print $NF}')
+    if [ -n "$serial" ]; then
+        echo "✓ YubiKey detected: $serial"
+        echo "GPG is now configured to use this card."
+    else
+        echo "✗ No YubiKey detected"
+    fi
+}

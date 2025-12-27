@@ -9,6 +9,16 @@ SCREENSHOTS_FOLDER="${HOME}/Desktop"
 
 ###############################################################################
 
+defaults write org.gpgtools.pinentry-mac DisableKeychain -bool no
+defaults write org.gpgtools.common DisableKeychain -bool no
+defaults write org.gpgtools.common UseKeychain YES
+killall gpg-agent &> /dev/null
+killall gpg2 &> /dev/null
+killall gpg &> /dev/null
+killall dirmngr &> /dev/null
+
+###############################################################################
+
 # Close any open System Preferences panes, to prevent them from overriding settings we’re about to change
 osascript -e 'tell application "System Preferences" to quit'
 

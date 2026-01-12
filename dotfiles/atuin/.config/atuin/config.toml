@@ -290,10 +290,10 @@ strategy = "auto"
 ## Default filter mode can be overridden with the filter_mode setting.
 # filters = [ "global", "host", "session", "session-preload", "workspace", "directory" ]
 filters = [
-  "workspace",
-  "directory",
   "session-preload",
   "session",
+  "workspace",
+  "directory",
   "host",
   "global"
 ]

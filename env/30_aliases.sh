@@ -92,3 +92,6 @@ alias tailf='tail -f'
 
 # ls
 alias ls='lsd --group-dirs first' # list view
+
+# claude-mem
+alias claude-mem='bun "/Users/alex/.claude/plugins/marketplaces/thedotmack/plugin/scripts/worker-service.cjs"'
